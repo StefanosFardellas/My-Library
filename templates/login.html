@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Login</title>
+{% endblock %}
+
+{% block body %}
+
+<!-- Wrapper -->
+<div class="wrapper">
+    <section class="form">
+        <h1>Login</h1>
+        {% with messages = get_flashed_messages(with_categories=True) %}
+        {% if messages %}
+        {% for category, msg in messages %}
+        {% if category == "success" %}
+        <div class="success-message">{{ msg }}</div>
+        {% endif %}
+        {% if category == "error" %}
+        <div class="invalid-message">{{ msg }}</div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endwith %}
+        <form action="/login" method="POST" class="form-content">
+            <div class="form-fields">
+                {{ form.hidden_tag() }}
+                <div class="form-field">
+                    <i class="fas fa-user"></i>
+                    {{ form.username(class="form-input") }}
+                </div>
+                <div class="form-field">
+                    <i class="fas fa-lock"></i>
+                    {{ form.password(class="form-input") }}
+                </div>
+                <div>
+                    {{ form.submit(class="form-btn") }}
+                </div>
+                <div>
+                    <small class="text-muted">
+                        You don't have an existing account? Create one
+                    </small>
+                    <a href="{{ url_for('sign_up')}}" class="form-btn" role="button">Sign up</a>
+                </div>
+        </form>
+</div>
+</section>
+
+<br><br><br><br><br><br><br>
+
+<!-- Footer -->
+<section class="footer">
+    <p>MyLibrary &copy; 2020</p>
+</section>
+
+<!-- Wrapper ends -->
+</div>
+
+{% endblock %}

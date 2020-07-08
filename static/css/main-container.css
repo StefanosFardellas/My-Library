@@ -1,0 +1,36 @@
+/* Main Container */
+.main-container {
+    grid-area: main-container;
+    min-height: 400px;
+    background: url(/static/website_pics/pic5.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.main-container h1 {
+    font-size: 4rem;
+    margin-top: 0px;
+    margin-bottom: 250px;
+    color:  var(--light);
+}
+
+.container-box p{
+    color: var(--light);
+    font-size: 2rem;
+}
+
+.container-box  a{
+    background: var(--dark);
+    border-radius: 3px;
+    color: var(--light);
+    padding: 0.4rem 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+}

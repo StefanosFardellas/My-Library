@@ -1,0 +1,133 @@
+/* Variables */
+:root {
+    --primary: #ddd;
+    --dark: #333;
+    --light: #fff;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+html {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--dark);
+}
+
+body {
+    background-color: #ccc;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.btn {
+    background: var(--dark);
+    border-radius: 3px;
+    color: var(--light);
+    padding: 0.4rem 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    transition: all 0.3s ease 0s;
+}
+
+.container {
+    margin: 30px 50px;
+}
+
+.btn:hover{
+    background: #b3b3b3;
+    color: var(--dark);
+    padding: 0.4rem 1.1rem;
+    text-decoration: none;
+    border: 0;
+}
+
+img {
+    max-width: 80%;
+    justify-self: center;
+}
+
+hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
+
+/* Wrapper */
+.wrapper {
+    display: grid;
+    grid-gap: 100px;
+}
+
+.wrapper h1 {
+    color: var(--dark);
+    font-family: 'Open Sans', sans-serif;;
+}
+
+/* Top Container */
+
+.top-container {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-areas: 'showcase showcase top-box-a';
+}
+
+/* Showcase */
+.showcase {
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(/static/website_pics/pic2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: var(--shadow);
+}
+
+.showcase h1 {
+    font-size: 4rem;
+    margin-top: 0px;
+    margin-bottom: 250px;
+    color:  var(--light);
+}
+
+/* Top Box */
+.top-box {
+    background: var(--primary);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+}
+
+.top-box-a {
+    grid-area: top-box-a;
+}
+
+/* Portfolio */
+.portfolio {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.portfolio img {
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+/* Footer */
+.footer {
+    margin-top: 2rem;
+    background-color: var(--dark);
+    color: var(--light);
+    text-align: center;
+    padding: 1rem;
+}

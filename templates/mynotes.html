@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>My Notes</title>
+{% endblock %}
+
+{% block body %}
+<!-- Wrapper -->
+<div class="wrapper">
+
+    <!-- Form -->
+    <form method="POST" action="" class="contact-form">
+        <h2>Add a new note</h2>
+        {{ form.hidden_tag() }}
+        <div class="input-fields">
+            {{ form.content(class="textarea") }}
+        </div>
+
+        <!-- Submit -->
+        <div>
+            {{ form.submit(class="btn") }}
+        </div>
+    </form>
+    <!-- Form Ends -->
+
+    <!-- My Notes -->
+    <h1>These is my notes</h1>
+    <section class="notes">
+        {% for note in notes %}
+        {% if note.user_id == current_user.id %}
+        <div class="note">
+            <div class="note-content">
+                <h4>{{ note.content }}</h4>
+            </div>
+            <a href="/mynotes/delete/{{ note.id }}" class="note btn-delete">delete</a>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </section>
+
+    <br><br><br>
+
+    <!-- Footer -->
+    <section class="footer">
+        <p>MyLibrary &copy; 2020</p>
+    </section>
+
+    <!-- Wrapper Ends -->
+</div>
+
+{% endblock %}

@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>My Books</title>
+{% endblock %}
+
+{% block body %}
+
+
+<!-- Wrapper -->
+<div class="wrapper">
+
+    <!-- Boxes -->
+    <h1>These is my Books</h1>
+    <section class="boxes">
+        {% for book in books %}
+        {% if book.user_id == current_user.id %}
+        <div class="box">
+            <div class="box-content">
+                <h3>{{ book.title }}</h3>
+                <img src="{{ book.img }}" class="book-img" alt="">
+                <h5>Author: {{ book.writer }}</h5>
+                <h5>Genre: {{book.genre }}</h5>
+                <a class="box-btn" href="/mybooks/delete/{{ book.id }}"> Remove </a>
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </section>
+
+    <!-- Footer -->
+    <section class="footer">
+        <p>MyLibrary &copy; 2020</p>
+    </section>
+
+    <!-- Wrapper Ends -->
+</div>
+
+{% endblock %}

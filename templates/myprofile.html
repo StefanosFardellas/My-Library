@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>My Profile</title>
+{% endblock %}
+
+{% block body %}
+
+<!-- Wrapper -->
+<div class="wrapper">
+    <section class="media">
+        <img class="profile-img" src="{{ profile_img }}">
+        <div class="media-body">
+            <h1>My Profile</h1>
+            <p>Username: {{ current_user.username }}</p>
+            <p>Email: {{ current_user.email }}</p>
+        </div>
+    </section>
+
+    <!-- Profile Info -->
+    <section class="form">
+        <form action="" method="POST" class="form-content" enctype="multipart/form-data">
+            <div class="form-fields">
+                {{ form.hidden_tag() }}
+                <div>
+                    <h2>Update Account Info</h2>
+                </div>
+                <div class="form-field">
+                    {% if form.username.errors %}
+                    <div class="invalid-message">
+                        {% for error in form.username.errors %}
+                        <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                    <i class="fas fa-user"></i>
+                    {{ form.username(class="form-input") }}
+                    {% else %}
+                    <i class="fas fa-user"></i>
+                    {{ form.username(class="form-input") }}
+                    {% endif %}
+                </div>
+                <div class="form-field">
+                    {% if form.email.errors %}
+                    <i class="fas fa-envelope"></i>
+                    {{ form.email(class="form-input") }}
+                    {% for error in form.email.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                    {% else %}
+                    <i class="fas fa-envelope"></i>
+                    {{ form.email(class="form-input") }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.profile_img(class="image-input") }}
+
+                    {% if form.profile_img.errors %}
+                    {% for error in form.profile_img.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.submit(class="btn btn-dark") }}
+                </div>
+            </div>
+        </form>
+    </section>
+
+    <br><br><br>
+
+    <!-- Footer -->
+    <section class="footer">
+        <p>MyLibrary &copy; 2020</p>
+    </section>
+</div>
+<!-- Wrapper Ends -->
+
+
+{% endblock %}

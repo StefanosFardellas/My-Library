@@ -1,0 +1,77 @@
+/* Boxes */
+.boxes {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.box {
+    display: grid;
+    grid-gap: 10px;
+    justify-self: center;
+}
+
+.box-content {
+    background: var(--primary);
+    text-align: center;
+    margin: 0;
+    justify-self: center;
+    padding: 1.5rem 2rem;
+    max-width: 250px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    
+}
+
+.box-content a {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.book-img {
+    width: 200px;
+    height: 250px;
+    border-radius: 5px; 
+    border: none;
+}
+
+.box .box-btn {
+    color: #737373;
+    font-family: 'Exo', sans-serif;
+    border: none;
+}
+
+.box .box-btn:hover {
+    color: #404040;
+    font-family: 'Exo', sans-serif;
+}
+
+.book-box {
+    display: grid;
+    grid-gap: 10px;
+    justify-self: center;
+    margin: 75px;
+}
+
+.book-box-content {
+    background: var(--primary);
+    text-align: center;
+    margin: 0;
+    justify-self: center;
+    padding: 1.5rem 2rem;
+    max-width: 250px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.book-box-content h5 {
+    font-size: 1.4rem;
+}
+
+.book-box-content h3 {
+    font-size: 1.5rem;
+}
+
+.book-box-content a {
+    color: var(--dark);
+    text-decoration: none;
+}

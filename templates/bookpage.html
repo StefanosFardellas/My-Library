@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>{{ book.title }}</title>
+{% endblock %}
+
+{% block body %}
+
+<!-- Wrapper -->
+<div class="wrapper">
+
+    <!-- Box -->
+    <section class="book-box">
+        <div class="book-box-content">
+            <h3>{{ book.title }}</h3>
+            <img src="{{ book.img }}" class="book-img" alt="">
+            <h5>Author: {{ book.writer }}</h5>
+            <h5>Genre: {{ book.genre }}</h5>
+            <p><a href="/add-book/{{ book.id }}"><i class="far fa-heart"></i> Add book</a></p>
+        </div>
+    </section>
+
+    <section class="footer">
+        <p>MyLibrary &copy; 2020</p>
+    </section>
+</div>
+
+
+{% endblock %}

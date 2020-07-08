@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block head %}
+
+<title>My Page</title>
+{% endblock %}
+
+{% block body %}
+
+<!-- Wrapper -->
+<div class="wrapper">
+
+    <!-- Top Container -->
+    <section class="top-container">
+        <header class="showcase">
+            <h1>Welcome to MyLibrary {{ current_user.username }}</h1>
+        </header>
+        <div class="top-box top-box-a">
+            <h4>Choose a Genre</h4>
+            <li><a href="/main-page/book-genres/Politics" class="btn">Politics</a></li>
+            <li><a href="/main-page/book-genres/Drama" class="btn">Drama</a></li>
+            <li><a href="/main-page/book-genres/Literature" class="btn">Literature</a></li>
+            <li><a href="/main-page/book-genres/Scientific" class="btn">Scientific</a></li>
+            <li><a href="/main-page/book-genres/Comic" class="btn">Comic</a></li>
+            <li><a href="/main-page/book-genres/Biography" class="btn">Biography</a></li>
+        </div>
+    </section>
+
+    <!-- Boxes -->
+    <section class="boxes">
+        {% for book in books %}
+        <div class="box">
+            <div class="box-content">
+                <h3><a href="/main-page/book/{{ book.id }}" class="box-btn">{{ book.title }}</a></h3>
+                <a href="/main-page/book/{{ book.id }}"><img class="book-img" src="{{ book.img }}" alt=""></a>
+                <h5>Author: {{ book.writer }}</h5>
+                <p><a href="/add-book/{{ book.id }}"><i class="far fa-heart"></i> Add book</a></p>
+            </div>
+        </div>
+        {% endfor %}
+    </section>
+
+    <hr>
+    
+    <!-- Portfolio -->
+    <section class="portfolio">
+        <img src="http://source.unsplash.com/random/200x200" alt="">
+        <img src="http://source.unsplash.com/random/201x200" alt="">
+        <img src="http://source.unsplash.com/random/202x200" alt="">
+        <img src="http://source.unsplash.com/random/203x200" alt="">
+        <img src="http://source.unsplash.com/random/204x200" alt="">
+        <img src="http://source.unsplash.com/random/205x200" alt="">
+        <img src="http://source.unsplash.com/random/206x200" alt="">
+        <img src="http://source.unsplash.com/random/207x200" alt="">
+        <img src="http://source.unsplash.com/random/208x200" alt="">
+        <img src="http://source.unsplash.com/random/209x200" alt="">
+        <img src="http://source.unsplash.com/random/210x200" alt="">
+        <img src="http://source.unsplash.com/random/211x200" alt="">
+        
+    </section>
+    
+
+    <!-- Footer -->
+    <section class="footer">
+        <p>MyLibrary &copy; 2020</p>
+    </section>
+</div>
+<!-- Wrapper Ends -->
+
+{% endblock %}

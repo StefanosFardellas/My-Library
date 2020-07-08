@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>MyLibrary</title>
+{% endblock %}
+
+{% block body %}
+
+<div class="wrapper">
+
+    <!-- Main Container -->
+    <section>
+        <header class="main-container">
+            <h1>Welcome to MyLibrary</h1>
+            <div class="container-box">
+                <p class="container-p">If you have an existing account </p>
+                <a href="/login" class="container-btn" role="button">Login</a>
+                <p class="container-p">Else </p>
+                <a href="/sign-up" role="button">Sign up</a>
+            </div>
+        </header>
+    </section>
+
+    <hr>
+
+    <!-- Footer -->
+    <section class="footer">
+        <p>MyLibrary - Στέφανος - Φαρδέλλας - 1080576 &copy; 2020</p>
+    </section>
+</div>
+
+{% endblock %}

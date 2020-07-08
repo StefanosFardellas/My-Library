@@ -1,0 +1,137 @@
+/* Form */
+.form h1 {
+    position: relative;
+    color: var(--dark);
+    font-size: 3rem;
+} 
+
+.form-content {
+    background: #595959;
+    color: var(--light);
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    max-width: 500px;
+    justify-self: center;
+    border-radius: 5px;
+    display: grid;
+    grid-gap: 20px;
+}
+
+.form-fields {
+    align-items: center;
+    display: grid;
+    margin: 30px auto;
+    padding: 5px;
+    grid-gap: 20px;
+}
+
+.form-field {
+    border-bottom: 3px solid var(--light);
+}
+
+.form-input {
+    font-family: 'Open Sans', sans-serif;
+    align-items: center;
+    width: 80%;
+    margin: 10px auto;
+    padding: 5px;
+    font-size: 16px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.form-input i {
+    width: 26px;
+    display: left;
+    text-align: center;
+}
+
+.form-btn {
+    width: 50%;
+    background: var(--dark);
+    border-radius: 3px;
+    color: var(--light);
+    padding: 0.4rem 1.1rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+}
+
+.form-btn:hover {
+    background: #b3b3b3;
+    color: var(--dark);
+    padding: 0.4rem 1.1rem;
+    text-decoration: none;
+    border: 0;
+}
+
+.invalid-message {
+    max-width: 35rem;
+    margin: 10px auto;
+    padding: 10px;
+    background: #ff8080;
+    border: 2px solid #a30f2d;
+    font-size: 14px;
+    color: #750a20;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.success-message {
+    max-width: 35rem;
+    margin: 10px auto;
+    padding: 10px;
+    background: #79d879;
+    border: 2px solid #50cc50;
+    font-size: 14px;
+    color: #248f24;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.form-fields h2 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--dark);
+    font-size: 1.5rem;
+    font-weight: 15px;
+    text-align: center;
+}
+
+.form-alt {
+    margin: 10px auto;
+    padding: 5px;
+    border: none;
+    display: inline-block;
+}
+
+.form-alt small {
+    font-size: 15px;
+    color: var(--light);
+    text-align: center;
+}
+
+.form-alt a {
+    margin: 10px;
+    font-size: 13px;
+    background: #404040;
+    border-radius: 3px;
+    color: var(--light);
+    padding: 0.3rem 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+}
+
+.form-alt a:hover {
+    margin: 10px;
+    font-size: 13px;
+    background: var(--primary);
+    border-radius: 3px;
+    color: var(--dark);
+    padding: 0.3rem 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+}
